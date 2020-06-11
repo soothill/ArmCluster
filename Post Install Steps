@@ -1,0 +1,99 @@
+# These are the steps that should be done post installation of the basic operating system
+
+# Connect to SUSE repository for SES This assumes you have an RMT server setup with license keys on it.
+
+SUSEConnect -p ses/6/aarch64
+
+# Install yast to make configuraiton simpler and more consistent.
+
+zypper in -t pattern yast2_basis 
+
+# Install some additional packages to make testing networking and monitoring.
+
+zypper in sysstat  iputils tuned iperf python wget make 
+
+# Configure Tuned profile for network throughput
+
+systemctl enable tuned
+systemctl start tuned
+tuned-adm profile throughput-performance
+
+
+# Install latest Mellanox drivers
+
+wget http://www.mellanox.com/downloads/ofed/MLNX_EN-5.0-1.0.0.0/mlnx-en-5.0-1.0.0.0-sles15sp1-aarch64.tgz
+
+tar -xvf mlnx-en-5.0-1.0.0.0-sles15sp1-aarch64.tgz
+
+cd mlnx-en-5.0-1.0.0.0-sles15sp1-aarch64/
+
+wget http://www.mellanox.com/downloads/firmware/fw-ConnectX6-rel-20_27_6008-MCX653105A-HDA_Ax-UEFI-14.20.25-FlexBoot-3.5.903.bin.zip
+
+unzip fw-ConnectX6-rel-20_27_6008-MCX653105A-HDA_Ax-UEFI-14.20.25-FlexBoot-3.5.903.bin.zip
+
+./install --fw-image-dir /root/mlnx-en-5.0-1.0.0.0-sles15sp1-aarch64
+
+
+
+/etc/init.d/mlnx-en.d restart
+
+
+# sysctl parameters that need setting for better throughput
+
+# Taken form this document https://community.mellanox.com/s/article/linux-sysctl-tuning
+
+sysctl -w net.ipv4.tcp_timestamps=0
+
+sysctl -w net.ipv4.tcp_sack=0
+
+sysctl -w net.core.netdev_max_backlog=250000
+
+sysctl -w net.core.somaxconn=2048
+
+sysctl -w net.ipv4.tcp_low_latency=1
+
+sysctl -w net.ipv4.tcp_rmem="10240 87380 2147483647"
+
+sysctl -w net.ipv4.tcp_wmem="10240 87380 2147483647"
+
+sysctl -w net.core.rmem_max=2147483647
+
+sysctl -w net.core.wmem_max=2147483647
+
+# sysctl -w net.core.rmem_default=4194304
+
+# sysctl -w net.core.wmem_default=4194304
+
+#sysctl -w net.core.optmem_max=4194304
+
+# Increasing buffers on cards
+
+setpci -s 0000:01:00.0 68.w=5950
+
+# Setting MTU size to 9000
+
+ip link set eth0 mtu 9000
+ip link set vlan220 mtu 9000
+ip link set vlan227 mtu 9000
+
+# Increase device buffers
+
+ethtool -G eth0 rx 8192 tx 8192
+
+
+# Mellanox Firmware tools
+
+wget https://www.mellanox.com/downloads/MFT/mft-4.14.4-6-arm64-rpm.tgz
+
+tar -xvf mft-4.14.4-6-arm64-rpm.tgz 
+
+cd mft-4.14.4-6-arm64-rpm/
+
+./install.sh
+
+# Mellanox Performance Tuning Scripts
+
+wget https://www.mellanox.com/sites/default/files/downloads/tools/mlnx_tuning_scripts.tar.gz
+
+tar -xvf mlnx_tuning_scripts.tar.gz 
+

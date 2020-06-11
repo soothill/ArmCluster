@@ -1,0 +1,8 @@
+# Commands used for benchmarking
+
+# iperf network testing
+
+iperf3 -s -f M
+
+iperf3 -c 172.16.220.55 -f G  -P 8
+

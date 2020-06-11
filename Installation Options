@@ -1,0 +1,32 @@
+# Connecting to Remote Console
+
+http://172.16.
+
+
+# Wiping disks before hand
+
+dd if=/dev/zero of=/dev/nvme1n1 bs=1M count=5000
+
+# RMT Server settings
+
+http://rmt.stable.suse.lab
+
+# Installation Options
+
+Minimal Installation
+
+Guided Setup
+
+Choose one of internal SSD's not NVME for OSD's
+
+Enable LVM
+
+Dont Enlarge Swap file for suspend
+
+Time Zone Mountain Time
+
+Skip User Creation
+
+Disable CPU Mitigations
+
+Turn off firewall
