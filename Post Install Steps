@@ -6,11 +6,11 @@ SUSEConnect -p ses/6/aarch64
 
 # Install yast to make configuraiton simpler and more consistent.
 
-zypper in -t pattern yast2_basis 
+zypper in -y -t pattern yast2_basis 
 
 # Install some additional packages to make testing networking and monitoring.
 
-zypper in sysstat  iputils tuned iperf python wget make 
+zypper in -y sysstat  iputils tuned iperf python wget make vi
 
 # Configure Tuned profile for network throughput
 
@@ -31,7 +31,7 @@ wget http://www.mellanox.com/downloads/firmware/fw-ConnectX6-rel-20_27_6008-MCX6
 
 unzip fw-ConnectX6-rel-20_27_6008-MCX653105A-HDA_Ax-UEFI-14.20.25-FlexBoot-3.5.903.bin.zip
 
-./install --fw-image-dir /root/mlnx-en-5.0-1.0.0.0-sles15sp1-aarch64
+./install --fw-image-dir /root/mlnx-en-5.0-1.0.0.0-sles15sp1-aarch64 -q
 
 
 
