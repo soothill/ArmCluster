@@ -1,0 +1,16 @@
+Increased MDS cache size but no other parameters
+Cephfs Mount options to minimize updates
+
+[RESULT] BW   phase 1            ior_easy_write                7.147 GiB/s : time 356.78 seconds
+[RESULT] BW   phase 2            ior_hard_write                0.756 GiB/s : time 421.75 seconds
+[RESULT] BW   phase 3             ior_easy_read               10.832 GiB/s : time 235.33 seconds
+[RESULT] BW   phase 4             ior_hard_read                2.874 GiB/s : time 111.00 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write               10.665 kiops : time 2402.64 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write                5.426 kiops : time 309.44 seconds
+[RESULT] IOPS phase 3                      find              276.300 kiops : time  98.81 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat               28.840 kiops : time 888.50 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat               22.142 kiops : time  75.83 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete                4.862 kiops : time 5270.34 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read               19.194 kiops : time  87.47 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete                6.499 kiops : time 259.47 seconds
+[SCORE] Bandwidth 3.60078 GiB/s : IOPS 16.7485 kiops : TOTAL 7.7658
