@@ -18,3 +18,15 @@ mount -o nocrc,noatime,nodiratime,noacl -t ceph 172.16.227.61:/ /mnt/cephfs -o n
 
 ceph osd pool set cephfs_data size 2
 
+ceph osd pool set cephfs_metadata size 2
+
+
+
+# Reduce Loggin level for MDS
+
+salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_mds 0/0'
+salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_mds_balancer 0/0'
+salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_mds_locker 0/0'
+salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_mds_log 0/0'
+salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_mds_log_expire 0/0'
+salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config setdebug_mds_migrator 0/0'

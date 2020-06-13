@@ -1,0 +1,13 @@
+[RESULT]       ior-easy-write        6.508198 GiB/s  : time 419.316 seconds
+[RESULT]    mdtest-easy-write       15.387314 kIOPS : time 1644.152 seconds
+[RESULT]       ior-hard-write        1.511126 GiB/s  : time 385.050 seconds
+[RESULT]    mdtest-hard-write        6.388698 kIOPS : time 305.652 seconds
+[RESULT]                 find      356.730668 kIOPS : time 76.413 seconds
+[RESULT]        ior-easy-read        5.961109 GiB/s  : time 457.684 seconds
+[RESULT]     mdtest-easy-stat       44.183399 kIOPS : time 573.070 seconds
+[RESULT]        ior-hard-read        5.324604 GiB/s  : time 109.213 seconds
+[RESULT]     mdtest-hard-stat        8.977659 kIOPS : time 217.436 seconds
+[RESULT]   mdtest-easy-delete        7.615707 kIOPS : time 3324.077 seconds
+[RESULT]     mdtest-hard-read       10.294113 kIOPS : time 189.596 seconds
+[RESULT]   mdtest-hard-delete        5.655267 kIOPS : time 345.660 seconds
+[SCORE] Bandwidth 4.203334 GB/s : IOPS 16.740224 kiops : TOTAL 8.388370

@@ -1,0 +1,9 @@
+version         = 
+config-hash     = 9E5A1CC1
+result-dir      = /mnt/cephfs/results/2020.06.11-23.24.43-app
+; START 2020-06-11 23:18:18
+
+
+[ior-easy-write]
+t_start         = 2020-06-11 23:18:18
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o /mnt/cephfs/datafiles/2020.06.11-23.24.43-app/ior-easy/ior_file_easy -O stoneWallingStatusFile=/mnt/cephfs/datafiles/2020.06.11-23.24.43-app/ior-easy/stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX

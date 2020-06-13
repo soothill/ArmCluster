@@ -1,0 +1,10 @@
+# Reduce logging to zero
+
+# Set readahead on NVME device to higher value
+
+# Change IO Scheduler on NVME device
+
+# Get second network cable installed to increase bandwdith between switches.
+
+# Turn off CRC checksums on Bluestore
+

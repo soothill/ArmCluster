@@ -1,0 +1,34 @@
+# SES Install Steps
+
+# On Admin node run the following
+
+zypper in -y salt-master
+systemctl enable salt-master
+systemctl start salt-master
+
+
+# On all nodes run the following
+
+zypper in -y salt-minion
+
+echo '172.16.227.60   amp-admin salt' >> /etc/hosts
+
+systemctl enable salt-minion
+
+systemctl start salt-minion
+
+# Configure salt
+
+# On admin node accept all salt keys
+salt-key -A
+
+# Tag all nodes 
+
+ salt '*' grains.append deepsea default
+
+zypper in -y deepsea
+
+
+ salt-run state.orch ceph.stage.0
+
+ 
