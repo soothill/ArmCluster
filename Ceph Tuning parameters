@@ -29,4 +29,4 @@ salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_mds_balancer
 salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_mds_locker 0/0'
 salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_mds_log 0/0'
 salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_mds_log_expire 0/0'
-salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config setdebug_mds_migrator 0/0'
+salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_mds_migrator 0/0'
