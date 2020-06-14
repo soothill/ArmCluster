@@ -4,6 +4,8 @@
 
 # Reduce all logging to zero :- Done
 
+# Increase MDS Cache to 64G :- Done
+
 # Set readahead on NVME device to higher value
 
 # Change IO Scheduler on NVME device

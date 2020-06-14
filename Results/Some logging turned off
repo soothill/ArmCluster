@@ -1,0 +1,16 @@
+[Summary] Results files in /mnt/cephfs/results/2020.06.14-05.43.29-scr
+[Summary] Data files in /mnt/cephfs/datafiles/2020.06.14-05.43.29-scr
+[RESULT] BW   phase 1            ior_easy_write                6.216 GiB/s : time 425.39 seconds
+[RESULT] BW   phase 2            ior_hard_write                1.349 GiB/s : time 384.82 seconds
+[RESULT] BW   phase 3             ior_easy_read                4.970 GiB/s : time 531.84 seconds
+[RESULT] BW   phase 4             ior_hard_read                5.287 GiB/s : time  98.18 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write               13.937 kiops : time 2580.91 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write                7.061 kiops : time 311.83 seconds
+[RESULT] IOPS phase 3                      find              331.110 kiops : time 115.29 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat               54.977 kiops : time 654.29 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat               72.639 kiops : time  30.31 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete                9.205 kiops : time 3907.92 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read               18.785 kiops : time 117.22 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete                5.560 kiops : time 396.96 seconds
+[SCORE] Bandwidth 3.85278 GiB/s : IOPS 24.3873 kiops : TOTAL 9.69324
+cp: cannot stat 'system-information.txt': No such file or directory
