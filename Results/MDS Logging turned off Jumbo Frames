@@ -1,0 +1,34 @@
+[Leaving] datafiles in /mnt/cephfs/datafiles/2020.06.13-00.49.39-scr
+[Summary] Results files in /mnt/cephfs/results/2020.06.13-00.49.39-scr
+[Summary] Data files in /mnt/cephfs/datafiles/2020.06.13-00.49.39-scr
+[RESULT] BW   phase 1            ior_easy_write                7.073 GiB/s : time 376.50 seconds
+[RESULT] BW   phase 2            ior_hard_write                1.551 GiB/s : time 385.55 seconds
+[RESULT] BW   phase 3             ior_easy_read                5.052 GiB/s : time 527.09 seconds
+[RESULT] BW   phase 4             ior_hard_read                5.291 GiB/s : time 113.01 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write               15.393 kiops : time 2463.65 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write                6.904 kiops : time 314.13 seconds
+[RESULT] IOPS phase 3                      find              321.500 kiops : time 124.70 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat               47.080 kiops : time 805.50 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat               80.865 kiops : time  26.82 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete                9.125 kiops : time 4155.90 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read               18.974 kiops : time 114.31 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete                6.405 kiops : time 339.90 seconds
+[SCORE] Bandwidth 4.13789 GiB/s : IOPS 24.8249 kiops : TOTAL 10.1352
+The io500.sh was run
+
+Running the C version of the benchmark now
+IO500 version
+[RESULT]       ior-easy-write        7.388361 GiB/s  : time 431.504 seconds
+[RESULT]    mdtest-easy-write       13.721294 kIOPS : time 2889.383 seconds
+[RESULT]       ior-hard-write        1.540179 GiB/s  : time 391.468 seconds
+[RESULT]    mdtest-hard-write        7.480946 kIOPS : time 315.279 seconds
+[RESULT]                 find      378.397464 kIOPS : time 111.013 seconds
+[RESULT]        ior-easy-read        6.633206 GiB/s  : time 481.361 seconds
+[RESULT]     mdtest-easy-stat       82.308647 kIOPS : time 482.265 seconds
+[RESULT]        ior-hard-read        5.174698 GiB/s  : time 116.729 seconds
+[RESULT]     mdtest-hard-stat       69.329692 kIOPS : time 34.034 seconds
+[RESULT]   mdtest-easy-delete        9.547823 kIOPS : time 4153.133 seconds
+[RESULT]     mdtest-hard-read       17.541964 kIOPS : time 134.461 seconds
+[RESULT]   mdtest-hard-delete        5.877183 kIOPS : time 402.074 seconds
+[SCORE] Bandwidth 4.445616 GB/s : IOPS 26.142797 kiops : TOTAL 10.780577
+cp: cannot stat 'system-information.txt': No such file or directory

@@ -30,3 +30,13 @@ salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_mds_locker 0
 salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_mds_log 0/0'
 salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_mds_log_expire 0/0'
 salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_mds_migrator 0/0'
+
+# Configuration Settings for Client
+
+salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set  client_cache_size 65536'
+salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set  debug_client 0/0'
+salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set  client_readahead_min 131072'
+
+# Bluestore tuning parameters
+salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_bluestore 0/0'
+salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set osd_memory_target 8589934592'
