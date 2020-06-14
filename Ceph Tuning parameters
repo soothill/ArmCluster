@@ -5,7 +5,7 @@ salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config get mds_cache_memory_l
 
 # How to set MDS server cache size
 
-salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set mds_cache_memory_limit 42949672960'
+salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set mds_cache_memory_limit 64424509440'
 
 # How to mount Cephfs 
 
