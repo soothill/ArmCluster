@@ -40,3 +40,19 @@ salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set  client_readahead_
 # Bluestore tuning parameters
 salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_bluestore 0/0'
 salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set osd_memory_target 8589934592'
+
+# Turn down all other logging
+
+salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_ms 0/0'
+salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_osd 0/0'
+salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_optracker 0/0'
+salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_auth 0/0'
+salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_asok 0/0'
+salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_bluefs 0/0'
+salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_bdev 0/0'
+salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_kstore 0/0'
+salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_rocksdb 0/0'
+salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_eventtrace 0/0'
+salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_rados 0/0'
+salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_perfcounter 0/0'
+salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_finisher 0/0'

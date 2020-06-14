@@ -1,4 +1,8 @@
-# Reduce logging to zero
+# Reduce logging to zero :- Done
+
+# Increase Bluestore cache size :- Done
+
+# Reduce all logging to zero :- Done
 
 # Set readahead on NVME device to higher value
 
