@@ -5,7 +5,7 @@ salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config get mds_cache_memory_l
 
 # How to set MDS server cache size
 
-salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set mds_cache_memory_limit 64424509440'
+salt 'amp-*' cmd.run 'ceph daemon mds.$HOSTNAME config set mds_cache_memory_limit 64424509440'
 
 # How to mount Cephfs 
 
@@ -56,3 +56,13 @@ salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_eventtrace 0
 salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_rados 0/0'
 salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_perfcounter 0/0'
 salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_finisher 0/0'
+
+# Increasing IO Queue Depth
+
+salt 'amp-osd*' cmd.run 'echo 1024 > /sys/block/nvme0n1/queue/nr_requests'
+salt 'amp-osd*' cmd.run 'echo 1024 > /sys/block/nvme1n1/queue/nr_requests'
+
+# Changing IO Scheduler to none
+
+salt 'amp-osd*' cmd.run 'echo "none" >/sys/block/nvme0n1/queue/scheduler'
+salt 'amp-osd*' cmd.run 'echo "none" >/sys/block/nvme1n1/queue/scheduler'

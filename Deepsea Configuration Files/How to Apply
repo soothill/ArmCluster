@@ -1,0 +1,9 @@
+# These commands will apply a new ceph.config to all the nodes
+
+# This builds the configuration file ready to be deployed
+
+salt 'amp-admin*' state.apply ceph.configuration.create
+
+# This deploys the ceph configuration file to all nodes
+
+salt '*' state.apply ceph.configuration
