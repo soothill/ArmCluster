@@ -1,0 +1,26 @@
+#!/bin/bash
+
+salt -I roles:mds cmd.run 'systemctl stop ceph-mds.target'
+for i in `seq 0 12`;
+do
+	ceph mds fail $i
+ done
+ ceph fs rm cephfs --yes-i-really-mean-it
+ ceph tell mon.* injectargs --mon-allow-pool-delete=true
+ ceph osd pool rm cephfs_data cephfs_data --yes-i-really-really-mean-it
+ ceph osd pool rm cephfs_metadata cephfs_metadata --yes-i-really-really-mean-it
+ salt -I roles:mds cmd.run 'systemctl start ceph-mds.target'
+sleep 10s
+
+ceph osd pool create cephfs_data 4096 4096 replicated 
+ceph osd pool create cephfs_metadata 2048 2048 replicated 
+ceph fs new cephfs cephfs_metadata cephfs_data
+salt -I roles:mds cmd.run 'systemctl stop ceph-mds.target'
+sleep 10s
+salt -I roles:mds cmd.run 'systemctl reset-failed ceph-mds@`hostname`.service'
+sleep 5s
+salt -I roles:mds cmd.run 'systemctl start ceph-mds.target'
+sleep 10s
+ceph osd pool set cephfs_data size 2
+ceph osd pool set cephfs_metadata size 2
+ceph fs set cephfs max_mds 12

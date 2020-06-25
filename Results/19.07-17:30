@@ -1,0 +1,34 @@
+[Leaving] datafiles in /mnt/cephfs/datafiles/2020.06.19-07.54.12-scr
+[Summary] Results files in /mnt/cephfs/results/2020.06.19-07.54.12-scr
+[Summary] Data files in /mnt/cephfs/datafiles/2020.06.19-07.54.12-scr
+[RESULT] BW   phase 1            ior_easy_write                4.817 GiB/s : time 676.38 seconds
+[RESULT] BW   phase 2            ior_hard_write                1.943 GiB/s : time 417.60 seconds
+[RESULT] BW   phase 3             ior_easy_read                6.153 GiB/s : time 521.43 seconds
+[RESULT] BW   phase 4             ior_hard_read                7.919 GiB/s : time 102.49 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write               20.357 kiops : time 589.47 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write                7.071 kiops : time 307.82 seconds
+[RESULT] IOPS phase 3                      find              315.450 kiops : time  44.94 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat               69.011 kiops : time 173.89 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat               85.550 kiops : time  25.44 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete               11.532 kiops : time 1040.64 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read               26.446 kiops : time  82.30 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete                5.947 kiops : time 367.03 seconds
+[SCORE] Bandwidth 4.62132 GiB/s : IOPS 28.8972 kiops : TOTAL 11.5561
+The io500.sh was run
+
+Running the C version of the benchmark now
+IO500 version
+[RESULT]       ior-easy-write        7.071968 GiB/s  : time 371.592 seconds
+[RESULT]    mdtest-easy-write       22.645514 kIOPS : time 529.944 seconds
+[RESULT]       ior-hard-write        1.691940 GiB/s  : time 408.708 seconds
+[RESULT]    mdtest-hard-write        7.855639 kIOPS : time 309.814 seconds
+[RESULT]                 find      379.988600 kIOPS : time 38.074 seconds
+[RESULT]        ior-easy-read        5.488516 GiB/s  : time 478.976 seconds
+[RESULT]     mdtest-easy-stat      114.724954 kIOPS : time 104.926 seconds
+[RESULT]        ior-hard-read        7.746560 GiB/s  : time 89.256 seconds
+[RESULT]     mdtest-hard-stat       97.860946 kIOPS : time 24.910 seconds
+[RESULT]   mdtest-easy-delete       11.071328 kIOPS : time 1085.083 seconds
+[RESULT]     mdtest-hard-read       25.043254 kIOPS : time 97.164 seconds
+[RESULT]   mdtest-hard-delete        5.898593 kIOPS : time 412.794 seconds
+[SCORE] Bandwidth 4.749219 GB/s : IOPS 32.488530 kiops : TOTAL 12.421560
+
