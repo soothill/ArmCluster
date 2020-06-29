@@ -6,9 +6,9 @@
 
 # Increase MDS Cache to 64G :- Done
 
-# Set readahead on NVME device to higher value
+# Set readahead on NVME device to higher value :- Done
 
-# Change IO Scheduler on NVME device
+# Change IO Scheduler on NVME device :- Done
 
 # Get second network cable installed to increase bandwdith between switches.
 
