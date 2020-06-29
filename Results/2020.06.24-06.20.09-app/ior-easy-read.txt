@@ -1,0 +1,41 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Wed Jun 24 06:42:33 2020
+Command line        : ./ior -C -Q 1 -g -G 271 -k -e -o /mnt/cephfs/datafiles/2020.06.24-06.20.09-app/ior-easy/ior_file_easy -O stoneWallingStatusFile=/mnt/cephfs/datafiles/2020.06.24-06.20.09-app/ior-easy/stonewall -t 2m -b 9920000m -F -r -R -a POSIX
+Machine             : Linux sr650-1
+TestID              : 0
+StartTime           : Wed Jun 24 06:42:33 2020
+Path                : /mnt/cephfs/datafiles/2020.06.24-06.20.09-app/ior-easy
+FS                  : 32.2 TiB   Used FS: 12.2%   Inodes: 14.5 Mi   Used Inodes: 100.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/cephfs/datafiles/2020.06.24-06.20.09-app/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 200
+clients per node    : 20
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 1892.09 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 2080374784000000.
+WARNING: Stat() of aggregate file size      = 3239680409600.
+WARNING: Using actual aggregate bytes moved = 3239680409600.
+read      7153       3581.92    0.000087    10158080000 2048.00    0.683304   431.28     0.003207   431.96     0   
+Max Read:  7152.52 MiB/sec (7499.96 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read         7152.52    7152.52    7152.52       0.00    3576.26    3576.26    3576.26       0.00  431.95958         NA            NA     0    200  20    1   1     1        1         0    0      1 10401873920000  2097152 3089600.0 POSIX      0
+Finished            : Wed Jun 24 06:49:45 2020

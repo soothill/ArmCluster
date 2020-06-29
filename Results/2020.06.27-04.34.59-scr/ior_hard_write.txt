@@ -1,0 +1,249 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sat Jun 27 05:34:40 2020
+Command line        : /IO500/bin/ior -w -s 500000 -a POSIX -v -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /mnt/cephfs/datafiles/2020.06.27-04.34.59-scr/ior_hard/IOR_file -O stoneWallingStatusFile=/mnt/cephfs/datafiles/2020.06.27-04.34.59-scr/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux sr650-1
+Start time skew across all tasks: 321.24 sec
+TestID              : 0
+StartTime           : Sat Jun 27 05:34:40 2020
+Path                : /mnt/cephfs/datafiles/2020.06.27-04.34.59-scr/ior_hard
+FS                  : 32.5 TiB   Used FS: 8.3%   Inodes: 7.0 Mi   Used Inodes: 100.0%
+Participating tasks: 200
+Using reorderTasks '-C' (useful to avoid read cache in client)
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/cephfs/datafiles/2020.06.27-04.34.59-scr/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 500000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 200
+clients per node    : 20
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 4.28 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+Commencing write performance test: Sat Jun 27 05:34:40 2020
+59: stonewalling pairs accessed: 86573
+75: stonewalling pairs accessed: 110519
+162: stonewalling pairs accessed: 92900
+94: stonewalling pairs accessed: 111872
+165: stonewalling pairs accessed: 84449
+123: stonewalling pairs accessed: 81643
+186: stonewalling pairs accessed: 109115
+42: stonewalling pairs accessed: 109927
+34: stonewalling pairs accessed: 92695
+108: stonewalling pairs accessed: 111548
+98: stonewalling pairs accessed: 111587
+166: stonewalling pairs accessed: 110197
+35: stonewalling pairs accessed: 109790
+48: stonewalling pairs accessed: 112002
+55: stonewalling pairs accessed: 110530
+146: stonewalling pairs accessed: 109314
+24: stonewalling pairs accessed: 110597
+185: stonewalling pairs accessed: 83996
+194: stonewalling pairs accessed: 111018
+129: stonewalling pairs accessed: 96332
+156: stonewalling pairs accessed: 109483
+190: stonewalling pairs accessed: 93312
+4: stonewalling pairs accessed: 108545
+62: stonewalling pairs accessed: 89752
+22: stonewalling pairs accessed: 92336
+71: stonewalling pairs accessed: 92832
+33: stonewalling pairs accessed: 81192
+26: stonewalling pairs accessed: 109348
+131: stonewalling pairs accessed: 109961
+144: stonewalling pairs accessed: 110412
+115: stonewalling pairs accessed: 110403
+192: stonewalling pairs accessed: 93294
+136: stonewalling pairs accessed: 82854
+140: stonewalling pairs accessed: 110886
+51: stonewalling pairs accessed: 110404
+7: stonewalling pairs accessed: 85966
+126: stonewalling pairs accessed: 90302
+45: stonewalling pairs accessed: 109412
+0: stonewalling pairs accessed: 84085
+171: stonewalling pairs accessed: 111334
+49: stonewalling pairs accessed: 84723
+99: stonewalling pairs accessed: 87243
+47: stonewalling pairs accessed: 94512
+85: stonewalling pairs accessed: 85103
+91: stonewalling pairs accessed: 110622
+97: stonewalling pairs accessed: 85103
+8: stonewalling pairs accessed: 112326
+119: stonewalling pairs accessed: 85279
+181: stonewalling pairs accessed: 111132
+74: stonewalling pairs accessed: 93129
+95: stonewalling pairs accessed: 84903
+29: stonewalling pairs accessed: 96315
+21: stonewalling pairs accessed: 110900
+23: stonewalling pairs accessed: 82260
+104: stonewalling pairs accessed: 93686
+151: stonewalling pairs accessed: 109375
+3: stonewalling pairs accessed: 81645
+125: stonewalling pairs accessed: 81889
+148: stonewalling pairs accessed: 111688
+86: stonewalling pairs accessed: 110356
+90: stonewalling pairs accessed: 93681
+1: stonewalling pairs accessed: 111086
+28: stonewalling pairs accessed: 112105
+31: stonewalling pairs accessed: 111809
+66: stonewalling pairs accessed: 110788
+100: stonewalling pairs accessed: 111107
+116: stonewalling pairs accessed: 81784
+193: stonewalling pairs accessed: 81942
+57: stonewalling pairs accessed: 94915
+2: stonewalling pairs accessed: 92993
+159: stonewalling pairs accessed: 95642
+13: stonewalling pairs accessed: 81227
+107: stonewalling pairs accessed: 93997
+25: stonewalling pairs accessed: 84966
+198: stonewalling pairs accessed: 111738
+109: stonewalling pairs accessed: 95942
+147: stonewalling pairs accessed: 85756
+80: stonewalling pairs accessed: 84147
+145: stonewalling pairs accessed: 84975
+50: stonewalling pairs accessed: 92843
+20: stonewalling pairs accessed: 93119
+43: stonewalling pairs accessed: 81577
+61: stonewalling pairs accessed: 92832
+153: stonewalling pairs accessed: 81941
+184: stonewalling pairs accessed: 109761
+164: stonewalling pairs accessed: 110495
+172: stonewalling pairs accessed: 93452
+56: stonewalling pairs accessed: 83000
+67: stonewalling pairs accessed: 85204
+157: stonewalling pairs accessed: 85333
+143: stonewalling pairs accessed: 81898
+191: stonewalling pairs accessed: 109761
+163: stonewalling pairs accessed: 81792
+195: stonewalling pairs accessed: 83849
+14: stonewalling pairs accessed: 92941
+88: stonewalling pairs accessed: 111683
+187: stonewalling pairs accessed: 85789
+199: stonewalling pairs accessed: 96242
+177: stonewalling pairs accessed: 94244
+117: stonewalling pairs accessed: 93687
+182: stonewalling pairs accessed: 92191
+106: stonewalling pairs accessed: 82510
+87: stonewalling pairs accessed: 85129
+5: stonewalling pairs accessed: 85495
+93: stonewalling pairs accessed: 81784
+183: stonewalling pairs accessed: 81914
+178: stonewalling pairs accessed: 111752
+189: stonewalling pairs accessed: 85443
+30: stonewalling pairs accessed: 83850
+152: stonewalling pairs accessed: 93545
+180: stonewalling pairs accessed: 82969
+84: stonewalling pairs accessed: 108262
+40: stonewalling pairs accessed: 111938
+135: stonewalling pairs accessed: 109759
+121: stonewalling pairs accessed: 110627
+174: stonewalling pairs accessed: 110472
+124: stonewalling pairs accessed: 110087
+160: stonewalling pairs accessed: 83075
+142: stonewalling pairs accessed: 89351
+89: stonewalling pairs accessed: 85159
+92: stonewalling pairs accessed: 92589
+132: stonewalling pairs accessed: 92188
+155: stonewalling pairs accessed: 84861
+96: stonewalling pairs accessed: 109726
+32: stonewalling pairs accessed: 93299
+130: stonewalling pairs accessed: 83080
+122: stonewalling pairs accessed: 92735
+112: stonewalling pairs accessed: 93088
+70: stonewalling pairs accessed: 111112
+77: stonewalling pairs accessed: 94958
+120: stonewalling pairs accessed: 93493
+128: stonewalling pairs accessed: 111817
+12: stonewalling pairs accessed: 92585
+170: stonewalling pairs accessed: 83701
+54: stonewalling pairs accessed: 93489
+68: stonewalling pairs accessed: 112102
+169: stonewalling pairs accessed: 95452
+73: stonewalling pairs accessed: 81082
+179: stonewalling pairs accessed: 95683
+6: stonewalling pairs accessed: 109448
+39: stonewalling pairs accessed: 88404
+176: stonewalling pairs accessed: 81539
+60: stonewalling pairs accessed: 111090
+38: stonewalling pairs accessed: 112095
+110: stonewalling pairs accessed: 82597
+10: stonewalling pairs accessed: 82802
+52: stonewalling pairs accessed: 92488
+65: stonewalling pairs accessed: 84968
+82: stonewalling pairs accessed: 92730
+58: stonewalling pairs accessed: 112104
+46: stonewalling pairs accessed: 81638
+16: stonewalling pairs accessed: 83121
+18: stonewalling pairs accessed: 112320
+158: stonewalling pairs accessed: 111689
+78: stonewalling pairs accessed: 111837
+138: stonewalling pairs accessed: 111904
+188: stonewalling pairs accessed: 112320
+17: stonewalling pairs accessed: 94752
+127: stonewalling pairs accessed: 95195
+197: stonewalling pairs accessed: 86432
+113: stonewalling pairs accessed: 81069
+133: stonewalling pairs accessed: 80929
+53: stonewalling pairs accessed: 80908
+72: stonewalling pairs accessed: 89678
+63: stonewalling pairs accessed: 81488
+102: stonewalling pairs accessed: 89205
+83: stonewalling pairs accessed: 81553
+173: stonewalling pairs accessed: 82178
+103: stonewalling pairs accessed: 80544
+44: stonewalling pairs accessed: 92453
+154: stonewalling pairs accessed: 110476
+64: stonewalling pairs accessed: 109111
+114: stonewalling pairs accessed: 92576
+134: stonewalling pairs accessed: 92576
+9: stonewalling pairs accessed: 95536
+19: stonewalling pairs accessed: 85106
+69: stonewalling pairs accessed: 86594
+79: stonewalling pairs accessed: 95931
+149: stonewalling pairs accessed: 95744
+139: stonewalling pairs accessed: 88158
+15: stonewalling pairs accessed: 109732
+105: stonewalling pairs accessed: 110137
+175: stonewalling pairs accessed: 92191
+41: stonewalling pairs accessed: 84863
+161: stonewalling pairs accessed: 109756
+81: stonewalling pairs accessed: 109941
+101: stonewalling pairs accessed: 92906
+111: stonewalling pairs accessed: 111191
+196: stonewalling pairs accessed: 109999
+36: stonewalling pairs accessed: 81872
+168: stonewalling pairs accessed: 111905
+118: stonewalling pairs accessed: 111874
+150: stonewalling pairs accessed: 82893
+27: stonewalling pairs accessed: 85776
+37: stonewalling pairs accessed: 94391
+137: stonewalling pairs accessed: 93917
+167: stonewalling pairs accessed: 86325
+141: stonewalling pairs accessed: 93001
+11: stonewalling pairs accessed: 110407
+76: stonewalling pairs accessed: 82294
+stonewalling pairs accessed min: 80544 max: 112326 -- min data: 3.5 GiB mean data: 4.2 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 4700800000000.
+WARNING: Stat() of aggregate file size      = 1056044121600.
+WARNING: Using actual aggregate bytes moved = 1056044121600.
+WARNING: maybe caused by deadlineForStonewalling
+write     2524.17    56308      378.23      45.91      45.91      0.020522   398.97     0.000986   398.99     0   
+Max Write: 2524.17 MiB/sec (2646.78 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        2524.17    2524.17    2524.17       0.00   56304.91   56304.91   56304.91       0.00  398.99183     300.02       2871.64     0    200  20    1   0     1        1         0    0 500000    47008    47008 1007122.1 POSIX      0
+Finished            : Sat Jun 27 05:41:19 2020

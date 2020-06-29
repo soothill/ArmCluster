@@ -1,0 +1,107 @@
+version         = 
+config-hash     = 7392AFA9
+result-dir      = /mnt/cephfs/results/2020.06.25-08.05.59-app
+; START 2020-06-25 07:59:32
+
+
+[ior-easy-write]
+t_start         = 2020-06-25 07:59:32
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o /mnt/cephfs/datafiles/2020.06.25-08.05.59-app/ior-easy/ior_file_easy -O stoneWallingStatusFile=/mnt/cephfs/datafiles/2020.06.25-08.05.59-app/ior-easy/stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX
+throughput-stonewall = 1266.15
+score           = 7.180309
+t_delta         = 380.9831
+t_end           = 2020-06-25 08:05:53
+
+[mdtest-easy-write]
+t_start         = 2020-06-25 08:05:53
+exe             = ./mdtest -n 60000 -u -L -F -P -N 1 -d /mnt/cephfs/datafiles/2020.06.25-08.05.59-app/mdtest-easy -x /mnt/cephfs/datafiles/2020.06.25-08.05.59-app/mdtest-easy-stonewall -C -Y -W 300 -a POSIX
+rate-stonewall  = 30.587089
+score           = 23.064744
+t_delta         = 520.3453
+t_end           = 2020-06-25 08:14:33
+
+[timestamp]
+t_start         = 2020-06-25 08:14:33
+t_delta         = 0.0106
+t_end           = 2020-06-25 08:14:33
+
+[ior-hard-write]
+t_start         = 2020-06-25 08:14:33
+exe             = ./ior -C -Q 1 -g -G 27 -k -e -o /mnt/cephfs/datafiles/2020.06.25-08.05.59-app/ior-hard/file -O stoneWallingStatusFile=/mnt/cephfs/datafiles/2020.06.25-08.05.59-app/ior-hard/stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 500000 -w -D 300 -a POSIX
+throughput-stonewall = 374.32
+score           = 2.178205
+t_delta         = 398.2951
+t_end           = 2020-06-25 08:21:11
+
+[mdtest-hard-write]
+t_start         = 2020-06-25 08:21:11
+exe             = ./mdtest -n 60000 -t -w 3901 -e 3901 -P -N 1 -F -d /mnt/cephfs/datafiles/2020.06.25-08.05.59-app/mdtest-hard -x /mnt/cephfs/datafiles/2020.06.25-08.05.59-app/mdtest-hard-stonewall -C -Y -W 300 -a POSIX
+rate-stonewall  = 8.994302
+score           = 8.812740
+t_delta         = 314.8445
+t_end           = 2020-06-25 08:26:26
+
+[find]
+t_start         = 2020-06-25 08:26:26
+exe             = ./pfind /mnt/cephfs/datafiles/2020.06.25-08.05.59-app -newer /mnt/cephfs/datafiles/2020.06.25-08.05.59-app/timestampfile -size 3901c -name *01* -C -q 10000
+found           = 86905
+total-files     = 14774606
+score           = 190.416983
+t_delta         = 77.5998
+t_end           = 2020-06-25 08:27:44
+
+[ior-easy-read]
+t_start         = 2020-06-25 08:27:44
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o /mnt/cephfs/datafiles/2020.06.25-08.05.59-app/ior-easy/ior_file_easy -O stoneWallingStatusFile=/mnt/cephfs/datafiles/2020.06.25-08.05.59-app/ior-easy/stonewall -t 2m -b 9920000m -F -r -R -a POSIX
+score           = 5.762317
+t_delta         = 474.6766
+t_end           = 2020-06-25 08:35:38
+
+[mdtest-easy-stat]
+t_start         = 2020-06-25 08:35:38
+exe             = ./mdtest -n 60000 -u -L -F -P -N 1 -d /mnt/cephfs/datafiles/2020.06.25-08.05.59-app/mdtest-easy -x /mnt/cephfs/datafiles/2020.06.25-08.05.59-app/mdtest-easy-stonewall -T -a POSIX
+score           = 78.870131
+t_delta         = 152.4227
+t_end           = 2020-06-25 08:38:11
+
+[ior-hard-read]
+t_start         = 2020-06-25 08:38:11
+exe             = ./ior -C -Q 1 -g -G 27 -k -e -o /mnt/cephfs/datafiles/2020.06.25-08.05.59-app/ior-hard/file -O stoneWallingStatusFile=/mnt/cephfs/datafiles/2020.06.25-08.05.59-app/ior-hard/stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 500000 -r -R -a POSIX
+score           = 11.078876
+t_delta         = 78.4250
+t_end           = 2020-06-25 08:39:29
+
+[mdtest-hard-stat]
+t_start         = 2020-06-25 08:39:29
+exe             = ./mdtest -n 60000 -t -w 3901 -e 3901 -P -N 1 -F -d /mnt/cephfs/datafiles/2020.06.25-08.05.59-app/mdtest-hard -x /mnt/cephfs/datafiles/2020.06.25-08.05.59-app/mdtest-hard-stonewall -T -a POSIX
+score           = 63.793764
+t_delta         = 43.5005
+t_end           = 2020-06-25 08:40:13
+
+[mdtest-easy-delete]
+t_start         = 2020-06-25 08:40:13
+exe             = ./mdtest -n 60000 -u -L -F -P -N 1 -d /mnt/cephfs/datafiles/2020.06.25-08.05.59-app/mdtest-easy -x /mnt/cephfs/datafiles/2020.06.25-08.05.59-app/mdtest-easy-stonewall -r -a POSIX
+score           = 19.867050
+t_delta         = 606.5449
+t_end           = 2020-06-25 08:50:19
+
+[mdtest-hard-read]
+t_start         = 2020-06-25 08:50:19
+exe             = ./mdtest -n 60000 -t -w 3901 -e 3901 -P -N 1 -F -d /mnt/cephfs/datafiles/2020.06.25-08.05.59-app/mdtest-hard -x /mnt/cephfs/datafiles/2020.06.25-08.05.59-app/mdtest-hard-stonewall -E -X -a POSIX
+score           = 21.421122
+t_delta         = 129.5224
+t_end           = 2020-06-25 08:52:29
+
+[mdtest-hard-delete]
+t_start         = 2020-06-25 08:52:29
+exe             = ./mdtest -n 60000 -t -w 3901 -e 3901 -P -N 1 -F -d /mnt/cephfs/datafiles/2020.06.25-08.05.59-app/mdtest-hard -x /mnt/cephfs/datafiles/2020.06.25-08.05.59-app/mdtest-hard-stonewall -r -a POSIX
+score           = 6.410600
+t_delta         = 433.3929
+t_end           = 2020-06-25 08:59:42
+
+[SCORE]
+MD              = 29.219064
+BW              = 5.621260
+SCORE           = 12.815926 
+hash            = DA150222
+; END 2020-06-25 08:59:50

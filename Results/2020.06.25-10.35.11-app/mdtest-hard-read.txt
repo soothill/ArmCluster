@@ -1,0 +1,32 @@
+-- started at 06/25/2020 11:25:00 --
+
+mdtest-3.3.0+dev was launched with 200 total task(s) on 10 node(s)
+Command line used: ./mdtest '-n' '60000' '-t' '-w' '3901' '-e' '3901' '-P' '-N' '1' '-F' '-d' '/mnt/cephfs/datafiles/2020.06.25-10.35.11-app/mdtest-hard' '-x' '/mnt/cephfs/datafiles/2020.06.25-10.35.11-app/mdtest-hard-stonewall' '-E' '-X' '-a' 'POSIX'
+Path: /mnt/cephfs/datafiles/2020.06.25-10.35.11-app
+FS: 32.1 TiB   Used FS: 13.4%   Inodes: 3.4 Mi   Used Inodes: 100.0%
+
+Nodemap: 10000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000
+V-0: Rank   0 Line  2166 Shifting ranks by 1 for each phase.
+200 tasks, 12000000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :      25074.427      25074.346      25074.395          0.025
+   File removal              :          0.000          0.000          0.000          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :         98.284         98.283         98.284          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+-- finished at 06/25/2020 11:26:39 --
+

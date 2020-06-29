@@ -1,0 +1,43 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sat Jun 20 10:16:15 2020
+Command line        : /IO500/bin/ior -w -s 1000000 -a POSIX -v -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /mnt/cephfs/datafiles/2020.06.20-10.09.16-scr/ior_hard/IOR_file -O stoneWallingStatusFile=/mnt/cephfs/datafiles/2020.06.20-10.09.16-scr/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux sr650-1
+Start time skew across all tasks: 321.30 sec
+TestID              : 0
+StartTime           : Sat Jun 20 10:16:15 2020
+Path                : /mnt/cephfs/datafiles/2020.06.20-10.09.16-scr/ior_hard
+FS                  : 65.2 TiB   Used FS: 5.0%   Inodes: 7.9 Mi   Used Inodes: 100.0%
+Participating tasks: 160
+Using reorderTasks '-C' (useful to avoid read cache in client)
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/cephfs/datafiles/2020.06.20-10.09.16-scr/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 1000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 160
+clients per node    : 16
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 6.84 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+Commencing write performance test: Sat Jun 20 10:16:15 2020
+ior ERROR: lseek64(29, 1099514957632, SEEK_SET) failed, errno 22, Invalid argument (aiori-POSIX.c:521)
+ior ERROR: lseek64(27, 1099514487552, SEEK_SET) failed, errno 22, Invalid argument (aiori-POSIX.c:521)
+ior ERROR: lseek64(31, 1099515380704, SEEK_SET) failed, errno 22, Invalid argument (aiori-POSIX.c:521)
+application called MPI_Abort(MPI_COMM_WORLD, -1) - process 24
+application called MPI_Abort(MPI_COMM_WORLD, -1) - process 43
+application called MPI_Abort(MPI_COMM_WORLD, -1) - process 34

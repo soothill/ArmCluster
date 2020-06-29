@@ -1,0 +1,46 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Jun 26 04:14:42 2020
+Command line        : /IO500/bin/ior -r -R -s 500000 -a POSIX -v -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /mnt/cephfs/datafiles/2020.06.26-03.21.11-scr/ior_hard/IOR_file -O stoneWallingStatusFile=/mnt/cephfs/datafiles/2020.06.26-03.21.11-scr/ior_hard/stonewall
+Machine             : Linux sr650-1
+Start time skew across all tasks: 321.25 sec
+TestID              : 0
+StartTime           : Fri Jun 26 04:14:42 2020
+Path                : /mnt/cephfs/datafiles/2020.06.26-03.21.11-scr/ior_hard
+FS                  : 31.5 TiB   Used FS: 24.1%   Inodes: 27.0 Mi   Used Inodes: 100.0%
+Participating tasks: 200
+Using reorderTasks '-C' (useful to avoid read cache in client)
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/cephfs/datafiles/2020.06.26-03.21.11-scr/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 500000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 200
+clients per node    : 20
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 4.28 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+Commencing read performance test: Fri Jun 26 04:14:42 2020
+
+WARNING: Expected aggregate file size       = 4700800000000.
+WARNING: Stat() of aggregate file size      = 848870464000.
+WARNING: Using actual aggregate bytes moved = 848870464000.
+read      11381      253873     71.13       45.91      45.91      0.001673   71.13      0.002964   71.13      0   
+Max Read:  11380.51 MiB/sec (11933.33 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        11380.51   11380.51   11380.51       0.00  253857.34  253857.34  253857.34       0.00   71.13444         NA            NA     0    200  20    1   0     1        1         0    0 500000    47008    47008  809545.9 POSIX      0
+Finished            : Fri Jun 26 04:15:53 2020

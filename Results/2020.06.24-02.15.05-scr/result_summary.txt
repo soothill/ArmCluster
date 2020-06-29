@@ -1,0 +1,1 @@
+[RESULT] BW   phase 1            ior_easy_write                7.142 GiB/s : time 372.73 seconds

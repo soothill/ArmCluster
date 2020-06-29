@@ -1,0 +1,32 @@
+-- started at 06/19/2020 16:02:51 --
+
+mdtest-3.3.0+dev was launched with 160 total task(s) on 10 node(s)
+Command line used: /IO500/bin/mdtest '-r' '-F' '-P' '-Y' '-d' '/mnt/cephfs/datafiles/2020.06.19-15.22.18-scr/mdt_easy' '-n' '100000' '-u' '-L' '-a' 'POSIX' '-x' '/mnt/cephfs/datafiles/2020.06.19-15.22.18-scr/mdt_easy-stonewall' '-N' '1'
+Path: /mnt/cephfs/datafiles/2020.06.19-15.22.18-scr
+FS: 32.3 TiB   Used FS: 11.3%   Inodes: 18.2 Mi   Used Inodes: 100.0%
+
+Nodemap: 1000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000
+V-0: Rank   0 Line  2166 Shifting ranks by 1 for each phase.
+160 tasks, 16000000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :      12135.860      12135.831      12135.849          0.009
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.737          0.737          0.737          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :       1318.410       1318.407       1318.408          0.001
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          1.357          1.357          1.357          0.000
+-- finished at 06/19/2020 16:24:51 --
+

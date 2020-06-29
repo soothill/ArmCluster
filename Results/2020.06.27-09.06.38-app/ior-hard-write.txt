@@ -1,0 +1,30 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sat Jun 27 09:12:34 2020
+Command line        : ./ior -C -Q 1 -g -G 27 -k -e -o /mnt/cephfs/datafiles/2020.06.27-09.06.38-app/ior-hard/file -O stoneWallingStatusFile=/mnt/cephfs/datafiles/2020.06.27-09.06.38-app/ior-hard/stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 500000 -w -D 300 -a POSIX
+Machine             : Linux sr650-1
+TestID              : 0
+StartTime           : Sat Jun 27 09:12:34 2020
+Path                : /mnt/cephfs/datafiles/2020.06.27-09.06.38-app/ior-hard
+FS                  : 32.5 TiB   Used FS: 9.0%   Inodes: 7.1 Mi   Used Inodes: 100.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/cephfs/datafiles/2020.06.27-09.06.38-app/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 500000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 200
+clients per node    : 20
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 4.28 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 

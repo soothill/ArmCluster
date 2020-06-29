@@ -1,0 +1,18 @@
+Connection closed by 172.16.227.25 port 22
+Connection closed by 172.16.227.27 port 22
+Connection closed by 172.16.227.28 port 22
+Connection closed by 172.16.227.29 port 22
+Connection closed by 172.16.227.30 port 22
+Connection closed by 172.16.227.21 port 22
+Connection closed by 172.16.227.22 port 22
+Connection closed by 172.16.227.23 port 22
+Connection closed by 172.16.227.24 port 22
+Connection closed by 172.16.227.26 port 22
+[mpiexec@sr630-1] Sending Ctrl-C to processes as requested
+[mpiexec@sr630-1] Press Ctrl-C again to force abort
+[mpiexec@sr630-1] HYDU_sock_write (utils/sock/sock.c:294): write error (Bad file descriptor)
+[mpiexec@sr630-1] HYD_pmcd_pmiserv_send_signal (pm/pmiserv/pmiserv_cb.c:177): unable to write data to proxy
+[mpiexec@sr630-1] ui_cmd_cb (pm/pmiserv/pmiserv_pmci.c:79): unable to send signal downstream
+[mpiexec@sr630-1] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[mpiexec@sr630-1] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:198): error waiting for event
+[mpiexec@sr630-1] main (ui/mpich/mpiexec.c:340): process manager error waiting for completion

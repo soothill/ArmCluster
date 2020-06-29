@@ -1,0 +1,4 @@
+[RESULT] BW   phase 1            ior_easy_write                4.795 GiB/s : time 667.03 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write               20.209 kiops : time 395.87 seconds
+[RESULT] BW   phase 2            ior_hard_write                2.230 GiB/s : time 396.40 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write                9.536 kiops : time 309.54 seconds

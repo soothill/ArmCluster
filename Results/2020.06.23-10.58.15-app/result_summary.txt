@@ -1,0 +1,14 @@
+IO500 version 
+[RESULT]       ior-easy-write        7.141554 GiB/s  : time 449.888 seconds
+[RESULT]    mdtest-easy-write       26.387792 kIOPS : time 454.838 seconds
+[RESULT]       ior-hard-write        2.254850 GiB/s  : time 409.030 seconds
+[RESULT]    mdtest-hard-write        8.541980 kIOPS : time 307.677 seconds
+[RESULT]                 find      206.944547 kIOPS : time 70.702 seconds
+[RESULT]        ior-easy-read        6.978195 GiB/s  : time 460.379 seconds
+[RESULT]     mdtest-easy-stat       62.399625 kIOPS : time 192.643 seconds
+[RESULT]        ior-hard-read       11.126016 GiB/s  : time 82.953 seconds
+[RESULT]     mdtest-hard-stat       61.225411 kIOPS : time 42.958 seconds
+[RESULT]   mdtest-easy-delete       17.839879 kIOPS : time 675.607 seconds
+[RESULT]     mdtest-hard-read       25.873875 kIOPS : time 101.579 seconds
+[RESULT]   mdtest-hard-delete        6.477642 kIOPS : time 406.616 seconds
+[SCORE] Bandwidth 5.946320 GB/s : IOPS 29.229740 kiops : TOTAL 13.183679
