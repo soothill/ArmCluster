@@ -1,0 +1,58 @@
+System:  sr630-1
+filesystem_utilization=172.16.227.61:/ 35520405504     0 35520405504   0% /mnt/cephfs
+date=2020.07.01-21.24.58
+io500_clean_cache=False
+io500_clean_cache_cmd='sudo -n bash -c "echo 3 > /proc/sys/vm/drop_caches"'
+io500_cleanup_workdir=
+io500_find_cmd=/IO500/bin/pfind
+io500_find_cmd_args=
+io500_find_mpi=True
+io500_ini=config-full.ini
+io500_ior_cmd=/IO500/bin/ior
+io500_ior_easy_params=' -a POSIX -t 2m -v -b 9920000m -F'
+io500_ior_easy_size=9920000
+io500_ior_hard_api=POSIX
+io500_ior_hard_api_specific_options=' -v'
+io500_ior_hard_writes_per_proc=500000
+io500_mdreal_cmd=/IO500/bin/md-real-io
+io500_mdreal_params='-P=5000 -I=1000'
+io500_mdtest_cmd=/IO500/bin/mdtest
+io500_mdtest_easy_files_per_proc=40000
+io500_mdtest_easy_params='-u -L -a POSIX'
+io500_mdtest_hard_api=POSIX
+io500_mdtest_hard_api_specific_options=
+io500_mdtest_hard_files_per_proc=40000
+io500_mpiargs='-np 200 --hostfile /IO500/hostfile'
+io500_mpirun=mpiexec
+io500_result_dir=/mnt/cephfs/results/2020.07.01-21.24.58-scr
+io500_rules=regular
+io500_run_find=True
+io500_run_ior_easy=True
+io500_run_ior_easy_read=True
+io500_run_ior_hard=True
+io500_run_ior_hard_read=True
+io500_run_md_easy=True
+io500_run_md_easy_delete=True
+io500_run_md_easy_stat=True
+io500_run_md_hard=True
+io500_run_md_hard_delete=True
+io500_run_md_hard_read=True
+io500_run_md_hard_stat=True
+io500_run_mdreal=False
+io500_stonewall_timer=300
+io500_workdir=/mnt/cephfs/datafiles/2020.07.01-21.24.58-scr
+Running the IO500 Benchmark now
+[Creating] directories
+
+[Starting] ior_easy_write
+[Exec] mpiexec -np 200 --hostfile /IO500/hostfile /IO500/bin/ior -w  -a POSIX -t 2m -v -b 9920000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /mnt/cephfs/datafiles/2020.07.01-21.24.58-scr/ior_easy/ior_file_easy -O stoneWallingStatusFile=/mnt/cephfs/datafiles/2020.07.01-21.24.58-scr/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300 
+[Results] in /mnt/cephfs/results/2020.07.01-21.24.58-scr/ior_easy_write.txt.
+[RESULT] BW   phase 1            ior_easy_write               11.710 GiB/s : time 430.12 seconds
+
+[Starting] mdtest_easy_write
+[Exec] mpiexec -np 200 --hostfile /IO500/hostfile /IO500/bin/mdtest -Y -C -F -P -d /mnt/cephfs/datafiles/2020.07.01-21.24.58-scr/mdt_easy -n 40000 -u -L -a POSIX -x /mnt/cephfs/datafiles/2020.07.01-21.24.58-scr/mdt_easy-stonewall -N 1 -W 300
+[Results] in /mnt/cephfs/results/2020.07.01-21.24.58-scr/mdtest_easy_write.txt.
+[RESULT] IOPS phase 1         mdtest_easy_write               21.734 kiops : time 368.09 seconds
+
+[Starting] ior_hard_write
+[Exec] mpiexec -np 200 --hostfile /IO500/hostfile /IO500/bin/ior -w -s 500000 -a POSIX  -v -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /mnt/cephfs/datafiles/2020.07.01-21.24.58-scr/ior_hard/IOR_file -O stoneWallingStatusFile=/mnt/cephfs/datafiles/2020.07.01-21.24.58-scr/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300

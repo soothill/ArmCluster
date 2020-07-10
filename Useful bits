@@ -1,6 +1,6 @@
 # Running multiple parallel deletes for all files in a directory
 
-find .  -maxdepth 1 -type d -print | xargs -P 30 -n 1 rm -r &
+find /mnt/cephfs/datafiles/*/mdtest-easy/test-dir.0-0 -maxdepth 1 -type d -print | xargs -P 30 -n 1 rm -r &
 
 
 # How to measure power on a node using IPMI

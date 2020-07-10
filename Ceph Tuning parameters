@@ -59,10 +59,14 @@ salt 'amp-osd*' cmd.run 'ceph daemon mds.$HOSTNAME config set debug_finisher 0/0
 
 # Increasing IO Queue Depth
 
-salt 'amp-osd*' cmd.run 'echo 1024 > /sys/block/nvme0n1/queue/nr_requests'
-salt 'amp-osd*' cmd.run 'echo 1024 > /sys/block/nvme1n1/queue/nr_requests'
+salt 'amp-osd*' cmd.run 'echo 1023 > /sys/block/nvme0n1/queue/nr_requests'
+salt 'amp-osd*' cmd.run 'echo 1023 > /sys/block/nvme1n1/queue/nr_requests'
+salt 'amp-osd*' cmd.run 'echo 1023 > /sys/block/sdd/queue/nr_requests'
+salt 'amp-osd*' cmd.run 'echo 1023 > /sys/block/sde/queue/nr_requests'
 
 # Changing IO Scheduler to none
 
 salt 'amp-osd*' cmd.run 'echo "none" >/sys/block/nvme0n1/queue/scheduler'
 salt 'amp-osd*' cmd.run 'echo "none" >/sys/block/nvme1n1/queue/scheduler'
+salt 'amp-osd*' cmd.run 'echo "noop" >/sys/block/sdd/queue/scheduler'
+salt 'amp-osd*' cmd.run 'echo "noop" >/sys/block/sde/queue/scheduler'

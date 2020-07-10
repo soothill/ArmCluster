@@ -1,0 +1,36 @@
+-- started at 07/05/2020 11:12:51 --
+
+mdtest-3.3.0+dev was launched with 200 total task(s) on 10 node(s)
+Command line used: /IO500/bin/mdtest '-Y' '-C' '-F' '-P' '-d' '/mnt/cephfs/datafiles/2020.07.05-11.10.12-scr/mdt_easy' '-n' '40000' '-u' '-L' '-a' 'POSIX' '-x' '/mnt/cephfs/datafiles/2020.07.05-11.10.12-scr/mdt_easy-stonewall' '-N' '1' '-W' '300'
+Path: /mnt/cephfs/datafiles/2020.07.05-11.10.12-scr
+FS: 63.9 TiB   Used FS: 10.3%   Inodes: 1.7 Mi   Used Inodes: 100.0%
+
+Nodemap: 10000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000
+V-0: Rank   0 Line  2166 Shifting ranks by 1 for each phase.
+200 tasks, 8000000 files
+Continue stonewall hit min: 19642 max: 40000 avg: 38117.2 
+
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :      22053.251      22053.196      22053.229          0.017
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   File create (stonewall)   :             NA             NA      25324.193             NA
+   Tree creation             :         31.437         31.437         31.437          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :        362.759        362.758        362.759          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   File create (stonewall)   :             NA             NA        301.034             NA
+   Tree creation             :          0.032          0.032          0.032          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+-- finished at 07/05/2020 11:18:54 --
+
